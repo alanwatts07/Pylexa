@@ -1,6 +1,8 @@
 # Pylexa
 A python alexa using openai, replicate, and gtts to create a better version of alexa.
 
+![Screenshot](https://user-images.githubusercontent.com/98160685/223595759-ab60ba6d-a3de-47d6-9d8f-ed8b2c8038b8.png)
+
 # Features
 1) A text file transcription of what is heard and replied.
 2) Transcribes audio to text with openai whisper and feeds it into openai for a response.
@@ -18,3 +20,4 @@ A python alexa using openai, replicate, and gtts to create a better version of a
 5) Load your replicate api key as an environment variable exacatly like so in terminal:
 export REPLICATE_API_TOKEN='YOUR_API_KEY'
 6) Now you just run python3 pylexa.py and be ready to record your audio=]
+
