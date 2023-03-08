@@ -12,16 +12,18 @@ model = replicate.models.get("openai/whisper")
 version = model.versions.get("30414ee7c4fffc37e260fcab7842b5be470b9b840f2b608f5baa9bbef9a259ed")
 openai.api_key = "YOUR_API_KEY"
 
+record_seconds=5
+number_lines=-5
 #before you start make sure you get your replicate.com api key and add as an env variable
 #{type this into console} export REPLICATE_API_TOKEN='token'
 
-def record_audio():
+def record_audio(record_time):
     # Set the parameters for recording
     FORMAT = pyaudio.paInt16
     CHANNELS = 1
     RATE = 44100
     CHUNK = 1024
-    RECORD_SECONDS = 4
+    RECORD_SECONDS = record_time
 
     # Create an instance of the PyAudio class
     audio = pyaudio.PyAudio()
@@ -85,7 +87,7 @@ def synthesize_text_with_gtts(text):
 
     return filename
 
-filename=record_audio()
+filename=record_audio(record_seconds)
 # https://replicate.com/openai/whisper/versions/30414ee7c4fffc37e260fcab7842b5be470b9b840f2b608f5baa9bbef9a259ed#input
 inputs = {
     # Audio file
@@ -168,7 +170,7 @@ if "image" in sentence:
 
     print(colored(sentence,'light_blue'))
     with open("trans.txt", "r") as f:
-        prev = f.readlines()[-5:]
+        prev = f.readlines()[number_lines:]
         last_3_lines = ''.join(prev)
 
     #sentence = 'Continue the conversation you are having: ' + last_3_lines
