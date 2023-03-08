@@ -13,7 +13,7 @@ version = model.versions.get("30414ee7c4fffc37e260fcab7842b5be470b9b840f2b608f5b
 openai.api_key = "YOUR_API_KEY"
 
 record_seconds=5
-number_lines=-5
+number_lines=-5 #must be negative 
 #before you start make sure you get your replicate.com api key and add as an env variable
 #{type this into console} export REPLICATE_API_TOKEN='token'
 
