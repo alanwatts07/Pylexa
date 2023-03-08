@@ -1,15 +1,16 @@
 # Pylexa
 A python alexa using openai, replicate, and gtts to create a better version of alexa.
 
-Features
+# Features
 1) A text file transcription of what is heard and replied.
 2) Transcribes audio to text with openai whisper and feeds it into openai for a response.
 3) Detects the word image and returns a generated image using replicate and stable-diffusion.
-4) Remembers as many lines of the conversation as you want (edit in the pylexa.py)
-5) Change record length also in the pylexa.py file.
-6) Recommended use is with VisualStudio with a split window. One can be open to image.png and one to trans.txt to watch everything.
+4) When image is created, response will use a model that creates text descriptions of images from the generated image. (It actually knows what is in the image it is sending back to you)
+5) Remembers as many lines of the conversation as you want (edit in the pylexa.py)
+6) Change record length also in the pylexa.py file.
+7) Recommended use is with VisualStudio with a split window. One can be open to image.png and one to trans.txt to watch everything.
 
-Setup
+# Setup
 1) Get openai and replicate api keys.
 2) Clone the repository
 3) pip install -r requirements.txt
