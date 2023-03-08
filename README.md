@@ -11,7 +11,9 @@ Features
 
 Setup
 1) Get openai and replicate api keys.
-2) OpenAi key goes on pylexa.py where is says 'YOUR_API_KEY'
-3) Load your replicate api key as an environment variable exacatly like so in terminal:
+2) Clone the repository
+3) pip install -r requirements.txt
+4) OpenAi key goes on pylexa.py where is says 'YOUR_API_KEY'
+5) Load your replicate api key as an environment variable exacatly like so in terminal:
 export REPLICATE_API_TOKEN='YOUR_API_KEY'
-4) Now you just run python3 pylexa.py and be ready to record your audio=]
+6) Now you just run python3 pylexa.py and be ready to record your audio=]
