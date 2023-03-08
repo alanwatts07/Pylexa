@@ -1,0 +1,9 @@
+wave
+replicate
+openai
+subprocess
+pyaudio
+termcolor
+gtts
+requests
+os
